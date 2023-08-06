@@ -1,0 +1,238 @@
+
+:root{
+    --glow-color: hsl(135, 100%, 69%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+  font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(300deg, #00ffb3, #ff4c6a, #c172ef);
+    background-size: 180% 180%;
+    animation: gradient 18s ease infinite;
+}
+
+@keyframes gradient{
+    0%{
+        
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+
+    }
+}
+
+#heading{
+    text-align: center;
+    font-size: 3rem;
+    margin: 10px;
+}
+
+/* =======button effect,transition, animation====== */
+
+i{
+    color: hsl(325, 100%, 65%);
+}
+
+#btn{
+    padding: 15px;
+    text-align: center;
+    margin: 40px 0 0 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+#btn:hover{
+    
+    background-color: var(--glow-color);
+    box-shadow: 0 0 15px var(--glow-color),
+    0 0 20px var(--glow-color),
+    0 0 50px var(--glow-color);
+    animation: border-blink 4s linear;
+}
+
+@keyframes border-blink{
+    0% {
+        opacity: 0.1;
+      }
+      2% {
+        opacity: 1;
+      }
+      4% {
+        opacity: 0.1;
+      }
+    
+      8% {
+        opacity: 1;
+      }
+      70% {
+        opacity: 0.7;
+      }
+      100% {
+        opacity: 1;
+      }
+}
+#btn span{
+    transition: all 0.3s;
+}
+
+#btn span:hover i{
+    color: #fff;
+}
+
+#btn span:hover{
+    animation: text-blink 4s linear;
+}
+@keyframes text-blink{
+    0% {
+        opacity: 0.1;
+      }
+      2% {
+        opacity: 0.1;
+      }
+      4% {
+        opacity: 0.5;
+      }
+      19% {
+        opacity: 0.5;
+      }
+      21% {
+        opacity: 0.1;
+      }
+      23% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 0.5;
+      }
+      83% {
+        opacity: 0.4;
+      }
+    
+      87% {
+        opacity: 1;
+      }
+}
+
+#btn:hover .move-left {
+ color: #fff;
+ text-shadow: 0 0 10px #fff,
+ 0 0 20px #fff,
+ 0 0 40px #fff,
+ 0 0 80px #fff,
+ 0 0 120px #fff,
+ 0 0 160px #fff;
+}
+
+
+.container{
+    display: block;
+    width: 50%;
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.box{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: 10px solid #000;
+    border-radius: 40px;
+    margin: 25px    ;
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.yellow{
+    background-color: yellow;
+}
+.trans{
+    
+    box-shadow: 0 0 10px 10px rgb(0, 0, 0,0.5);
+}
+
+.pressed{
+    border: 20px solid #fff;
+    box-shadow: 0 0 50px #fff,
+    0 0 100px #fff,
+    0 0 150px #fff;
+}
+
+.game-over{
+    background: linear-gradient(300deg, red,red,red);
+}
+
+/* responsiveness */
+
+@media(max-width:900px){
+    body{
+        background: #000;
+        color: #fff;
+    }
+    .big-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+    #heading{
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+  
+}
+
+@media(min-width:1600px){
+  body{
+    background: skyblue;
+   
+  }
+    .big-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    */
+    #heading{
+        font-size: 4rem;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    #btn{
+        font-size: 2rem;
+        padding: 30px;
+    }
+}

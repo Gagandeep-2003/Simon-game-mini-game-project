@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="x-icon" href="images/site-icon-2.jpeg">
+    <title>Simon Game</title>
+</head>
+<body>  
+   <div> <h1 id="heading">Press a key or Play button to Start</h1><br><br></div>
+   <div> <center><h2>High Score: <span id="score"></span></h2></center></div>
+ <div>  <center> <button id="btn" onclick="startGame()"><span class="move-left" ><i class="fa-solid fa-play"></i> Start</span></button></center></div>
+    <div class="container">
+
+        <div class="row">
+                <div class="box red " id="red">
+                </div>
+        
+                <div class="box green" id="green">
+                </div>
+                </div>
+        
+                <div class="row">
+                <div class="box blue" id="blue">
+                </div>
+        
+                <div class="box yellow" id="yellow">
+                </div>
+                </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
